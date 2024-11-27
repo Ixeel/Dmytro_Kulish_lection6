@@ -8,10 +8,10 @@ public class Main {
         System.out.println("Середня значення елементів масиву = "+ averageNumber(arr));
 
         //Task 2
-          minAndMax(arr);
+        minAndMax(arr);
 
         //Task 3
-       revertArr(arr);
+        revertArr(arr);
 
         //Task 4
         checkIfNumIsPresent(arr, 2);
