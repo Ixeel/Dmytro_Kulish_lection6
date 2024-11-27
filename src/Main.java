@@ -5,19 +5,19 @@ public class Main {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3};
         //Task 1
-        System.out.println("Середня значення елементів масиву = "+ AverageNumber(arr));
+        System.out.println("Середня значення елементів масиву = "+ averageNumber(arr));
 
         //Task 2
           minAndMax(arr);
 
         //Task 3
-        RevertArr(arr);
+       revertArr(arr);
 
         //Task 4
         checkIfNumIsPresent(arr, 2);
     }
 
-    public static int AverageNumber(int[] numbers) {
+    public static int averageNumber(int[] numbers) {
         int sum = 0;
         for (int num : numbers) {
             sum = sum + num;
@@ -34,7 +34,7 @@ public class Main {
         System.out.println("min = " + min + " max = " + max);
     }
 
-    public static void RevertArr(int[] numbers) {
+    public static void revertArr(int[] numbers) {
         System.out.print("Масив в зворотньому порядку: ");
         for (int i = numbers.length - 1; i >= 0; i--) {
             System.out.print(numbers[i] + " ");
