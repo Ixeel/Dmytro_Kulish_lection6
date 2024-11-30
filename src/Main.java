@@ -18,12 +18,29 @@ public class Main {
 
         //Task 7.1
         System.out.println(repeatEnd("Hello",3));
+
+        //Task 7.2
+        System.out.println(mixString("abc", "xyz"));
     }
 
  public static String repeatEnd(String string, int number) {
         String string2 = string.substring(string.length()-number);
         return string2.repeat(number);
    }
+    public static String mixString(String string1, String string2) {
+        StringBuilder builder = new StringBuilder();
+        int maxLength = Math.max(string1.length(), string2.length());
+        for (int i = 0; i < maxLength; i++) {
+            if (i < string1.length()) {
+                builder.append(string1.charAt(i));
+            }
+            if (i < string2.length()) {
+                builder.append(string2.charAt(i));
+            }
+        }
+        return builder.toString();
+    }
+
     public static int averageNumber(int[] numbers) {
         int sum = 0;
         for (int num : numbers) {
