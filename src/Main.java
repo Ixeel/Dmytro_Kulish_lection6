@@ -29,7 +29,7 @@ public class Main {
         System.out.println(zipZap("zopzop"));
 
         //Task 7.5
-        System.out.println(xyzThere("xyz.abc"));
+        System.out.println(xyzThere("abc.xyz"));
     }
 
  public static String repeatEnd(String string, int number) {
@@ -39,7 +39,7 @@ public class Main {
     public static boolean xyzThere(String string) {
      int index = string.indexOf("x");
      boolean flag = true;
-      if(index != 0 && string.charAt(index-1) == '.'){
+      if(index > 0 && string.charAt(index-1) == '.'){
          flag = false;
       }
       return flag;
