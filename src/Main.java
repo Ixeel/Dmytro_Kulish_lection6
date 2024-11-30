@@ -3,19 +3,27 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 2, 3};
-        //Task 1
-        System.out.println("Середня значення елементів масиву = "+ averageNumber(arr));
+//        int[] arr = new int[]{1, 2, 3};
+//        //Task 1
+//        System.out.println("Середня значення елементів масиву = "+ averageNumber(arr));
+//
+//        //Task 2
+//        minAndMax(arr);
+//
+//        //Task 3
+//        revertArr(arr);
+//
+//        //Task 4
+//        checkIfNumIsPresent(arr, 2);
 
-        //Task 2
-        minAndMax(arr);
-
-        //Task 3
-        revertArr(arr);
-
-        //Task 4
-        checkIfNumIsPresent(arr, 2);
+        //Task 7.1
+        System.out.println(repeatEnd("Hello",3));
     }
+
+ public static String repeatEnd(String string, int number) {
+        String string2 = string.substring(string.length()-number);
+        return string2.repeat(number);
+   }
     public static int averageNumber(int[] numbers) {
         int sum = 0;
         for (int num : numbers) {
