@@ -21,6 +21,12 @@ public class Main {
 
         //Task 7.2
         System.out.println(mixString("abc", "xyz"));
+
+        //Task 7.3
+
+
+        //Task 7.4
+        System.out.println(zipZap("zopzop"));
     }
 
  public static String repeatEnd(String string, int number) {
@@ -39,6 +45,18 @@ public class Main {
             }
         }
         return builder.toString();
+    }
+    public static StringBuilder zipZap(String string) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < string.length(); i++) {
+            if (i + 2 < string.length() && string.charAt(i) == 'z' && string.charAt(i + 2) == 'p') {
+                builder.append("zp");
+                i += 2;
+            } else {
+                builder.append(string.charAt(i));
+            }
+        }
+        return builder;
     }
 
     public static int averageNumber(int[] numbers) {
