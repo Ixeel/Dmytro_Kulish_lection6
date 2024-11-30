@@ -27,12 +27,23 @@ public class Main {
 
         //Task 7.4
         System.out.println(zipZap("zopzop"));
+
+        //Task 7.5
+        System.out.println(xyzThere("xyz.abc"));
     }
 
  public static String repeatEnd(String string, int number) {
         String string2 = string.substring(string.length()-number);
         return string2.repeat(number);
    }
+    public static boolean xyzThere(String string) {
+     int index = string.indexOf("x");
+     boolean flag = true;
+      if(index != 0 && string.charAt(index-1) == '.'){
+         flag = false;
+      }
+      return flag;
+    }
     public static String mixString(String string1, String string2) {
         StringBuilder builder = new StringBuilder();
         int maxLength = Math.max(string1.length(), string2.length());
