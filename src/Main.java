@@ -23,13 +23,15 @@ public class Main {
         System.out.println(mixString("abc", "xyz"));
 
         //Task 7.3
-
+        System.out.println(xyzMiddle("AxyzBBB"));
 
         //Task 7.4
         System.out.println(zipZap("zopzop"));
 
         //Task 7.5
         System.out.println(xyzThere("abc.xyz"));
+
+
     }
 
  public static String repeatEnd(String string, int number) {
@@ -43,6 +45,19 @@ public class Main {
          flag = false;
       }
       return flag;
+    }
+
+    public static boolean xyzMiddle(String string) {
+        int length = string.length()-1;
+       int index = string.indexOf('x');
+        int index2 = string.indexOf('z');
+        int rightchar = length - index2;
+boolean flag = false;
+        if (rightchar - index <= 1 && rightchar - index >=0  || index - rightchar <=1 && index-rightchar >=0) {
+         flag = true;
+        }
+
+        return flag;
     }
     public static String mixString(String string1, String string2) {
         StringBuilder builder = new StringBuilder();
